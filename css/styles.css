@@ -38,7 +38,7 @@ body{
     justify-content: space-around;
     align-items: center;
     border-radius: 15px;
-    margin: 20px;
+    margin: 10px;
     padding: 10px;
 }
 
@@ -94,14 +94,14 @@ body{
     }
 
     .card{
-        width: 40%;
+        width: 45%;
     }
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1140px){
 
     .container{
-        max-width: 1024px;
+        max-width: 1140px;
     }
 
     .card{
@@ -109,8 +109,10 @@ body{
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-around;
+        align-items: stretch;
+        width: 45%;
     }
     .card-image, .card-data{
-        width: 40%;
+        width: 45%;
     }
 }
