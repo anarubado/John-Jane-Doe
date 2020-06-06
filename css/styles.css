@@ -24,39 +24,38 @@ body{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    max-width: 395px;
     background: transparent;
     border: 1px solid #c7c7c7;
     margin: 0 auto;
-    max-width: 425px;
 }
 
 .card{
-    width: 90%;
-    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    background-color: white;
     border-radius: 15px;
-    margin: 10px;
+    margin: 15px;
     padding: 10px;
 }
 
-.card-image img{
-    border-radius: 50%;
-    width: 100%;
-    margin: 10px 0
-}
-
 .card-image,.card-data{
-    width: 90%;
+    width: 95%;
 }
 
-.card-image ul{
+.card-image img{
+    width: 100%;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.social-media{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
     justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .social-media li{
@@ -64,55 +63,69 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #508fb8;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
+}
+
+.card-data h2{
+    margin-bottom: 20px;
+}
+
+.card-data p{
+    margin-bottom: 10px;
 }
 
 .card-data a{
     display: inline-block;
-    margin: 10px 0;
-    padding: 10px;
     background-color: #c7c7c7;
-}
-
-.card-data h2{
-    margin: 20px 0;
-}
-
-.card-data p{
-    margin: 10px 0;
+    padding: 10px 15px;
+    margin-bottom: 10px;
 }
 
 @media (min-width: 768px){
+
     .container{
-        display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        justify-content: space-around;
-        max-width: 768px;
+        max-width: 738px;
     }
 
     .card{
         width: 45%;
+        flex-grow: 1;
     }
 }
 
-@media (min-width: 1140px){
+@media (min-width: 1024px){
 
     .container{
-        max-width: 1140px;
+        max-width: 994px;
     }
 
     .card{
+        flex-direction: row;
+        align-items: stretch;
+    }
+    
+    .card-image{
+        width: 30%;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        justify-content: space-around;
-        align-items: stretch;
-        width: 45%;
+
     }
-    .card-image, .card-data{
-        width: 45%;
+
+    .social-media{
+        align-self: flex-end;
     }
+
+    .card-data{
+        width: 65%;
+    }
+
+    .card-image img, .social-media, .card-data a{
+        margin: 0;
+    }
+
 }
